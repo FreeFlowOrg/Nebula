@@ -90,5 +90,5 @@ class Blockchain(object):
 
 
 """
-Copyright © 2018 FreeFlow . All rights reserved.
+Copyright © 2018 FreeFlo . All rights reserved.
 """
