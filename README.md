@@ -1,5 +1,5 @@
 # Nebula,Freeflo's blockchain
-![Nebula](https://drive.google.com/open?id=1brLn5beJuTIlB7GICiRp2baXS0n8_hOD)
+![Nebula](https://github.com/FreeFlowOrg/Nebula/blob/master/Screen%20Shot%202018-06-10%20at%202.45.36%20PM.png)
 A blockchain developed right from its roots.
 
 ## Getting Started
