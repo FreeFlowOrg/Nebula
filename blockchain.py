@@ -56,7 +56,7 @@ class Blockchain(object):
     @staticmethod # Hashing algo section
     def valid_proof(last_proof, proof):
 
-        guess = f'{last_proof}{proof}'.encode()
+        guess = (str(last_proof)+str(proof)).encode()
         guess_hash = hashlib.sha256(guess).hexdigest()
         return guess_hash[:2] == "ff"
 
@@ -72,20 +72,19 @@ class Blockchain(object):
 
         proof = 0
         while True:
-            guess = f'{last_proof}{proof}'.encode()
+            guess = (str(last_proof)+str(proof)).encode()
             guess_hash = hashlib.sha256(guess).hexdigest()
-            if guess_hash[:2] == "ff":
+            if guess_hash[:2] == "00":
                 break
 
             proof += 1
 
-        print(dedent(f'''
+        print(dedent('''
             New Proof found!
-            
-             New Proof: {proof}
+            New Proof: {proof}
             Last Proof: {last_proof}
-                  Hash: {guess_hash}
-        '''))
+            Hash: {guess_hash}
+		'''))
         return proof
 
 
