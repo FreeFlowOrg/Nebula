@@ -60,6 +60,7 @@ Add additional notes about how to deploy this on a live system
 ## Authors
 
 * **Saicharan Reddy** - *Initial work* - [Saicharan Reddy](https://github.com/mrsaicharan1)
+* **Rahul Kumaran** - *Initial Work and Long Time Contributor*-[Rahul Kumaran](https://github.com/rahulkumaran)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
