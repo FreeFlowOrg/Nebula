@@ -14,8 +14,17 @@ class Blockchain(object):
         self.chain = []
 
     # Create the genesis block
-        genesis_block = self.new_block(previous_hash=1, proof=100)
-        # self.chain.append(genesis_block)
+        # genesis_block = self.new_block(previous_hash=1, proof=100)#
+        genesis_block = {
+            'index': 1,
+            'timestamp': time(),
+            'transactions': self.current_transactions,
+            'proof': 100,
+            'previous_hash': 1,
+        }
+        genesis_block['hash'] = self.hash(genesis_block)
+        self.current_transactions = []
+        self.chain.append(genesis_block)
 
     def new_block(self, proof, previous_hash=None):
         block = {
@@ -23,7 +32,7 @@ class Blockchain(object):
             'timestamp': time(),
             'transactions': self.current_transactions,
             'proof': proof,
-            'previous_hash': previous_hash or self.chain[-1]['hash']
+            'previous_hash': self.chain[-1]['hash']
             }
 
         # Calculate the hash of this new Block
