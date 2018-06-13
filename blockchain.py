@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import hashlib
 import json
 from textwrap import dedent
@@ -14,7 +15,7 @@ class Blockchain(object):
 
     # Create the genesis block
         genesis_block = self.new_block(previous_hash=1, proof=100)
-        self.chain.append(genesis_block)
+        # self.chain.append(genesis_block)
 
     def new_block(self, proof, previous_hash=None):
         block = {
