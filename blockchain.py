@@ -82,7 +82,7 @@ class Blockchain(object):
         while True:
             guess = (str(last_proof)+str(proof)).encode()
             guess_hash = hashlib.sha256(guess).hexdigest()
-            if guess_hash[:2] == "00":
+            if guess_hash[:2] == "ff":
                 break
 
             proof += 1
