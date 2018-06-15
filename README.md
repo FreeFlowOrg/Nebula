@@ -43,7 +43,7 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+* This application will be deployed using the serverless framework Zappa(uses AWS on the backend).
 
 ## Built With
 
